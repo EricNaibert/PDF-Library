@@ -1,0 +1,25 @@
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+.scroll-pane {
+   -fx-background-color: #5A5A5A;
+}
+
+#groupButtons {
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-padding: 5;
+    -fx-background-color: #5A5A5A;
+    -fx-border-style: solid inside;
+    -fx-border-width: 5;
+    -fx-border-radius: 10;
+    -fx-border-color: white;
+}
+
+#libLabelId {
+    -fx-text-fill: white;
+    -fx-font-size: 17;
+    -fx-font-weight: bold;
+}
