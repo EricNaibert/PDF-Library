@@ -35,9 +35,8 @@ public class ShowBooksTask extends Task<Void> {
 
         CoversPathStorage.getBooksLocation();
         String userHomePath = System.getProperty("user.home");
-        File booksPath = new File(CoversPathStorage.getPathToBooks());
         File[] coversPathArray = new File(userHomePath + "/Documents/PdfLibrary/" + Refresh.getFolderName()).listFiles();
-        booksList = booksPath.listFiles();
+        booksList = CoversPathStorage.getBooksPaths();
 
         scrollPane = new ScrollPane();
         scrollPane.setPrefHeight(600);

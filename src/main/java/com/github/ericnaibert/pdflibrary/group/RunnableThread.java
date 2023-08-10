@@ -1,5 +1,6 @@
 package com.github.ericnaibert.pdflibrary.group;
 
+import com.github.ericnaibert.pdflibrary.storage.CoversPathStorage;
 import javafx.scene.control.Button;
 
 import java.awt.*;
@@ -14,10 +15,10 @@ public class RunnableThread {
             new Thread(() -> {
 
                 System.out.println("FILE OPENED");
-                System.out.println(HelloController.directories[index]);
+                System.out.println(CoversPathStorage.getBooksPaths()[index]);
 
                 try {
-                    Desktop.getDesktop().open(HelloController.directories[index]);
+                    Desktop.getDesktop().open(CoversPathStorage.getBooksPaths()[index]);
 
                 } catch (IOException e) {
                     System.out.println("Exception: " + e);

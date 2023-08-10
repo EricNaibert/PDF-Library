@@ -7,7 +7,9 @@ import java.nio.charset.StandardCharsets;
 
 public class CoversPathStorage {
 
-    private static String pathToBooks;
+    private static File[] booksPaths;
+
+    private static File pathToBooks;
 
     private static final String path = System.getProperty("user.home") + "/Documents/PdfLibrary/";
 
@@ -35,7 +37,9 @@ public class CoversPathStorage {
                 FileInputStream fileInputStream = new FileInputStream(pathToCovers);
                 DataInputStream dataInputStream = new DataInputStream(fileInputStream);
 
-                pathToBooks = new String(dataInputStream.readAllBytes(), StandardCharsets.UTF_8);
+                String temp = new String(dataInputStream.readAllBytes(), StandardCharsets.UTF_8);
+                setBooksPaths(temp);
+                setPathToBooks(temp);
 
             } catch (FileNotFoundException e) {
                 System.out.println("Exception: " + e);
@@ -45,7 +49,19 @@ public class CoversPathStorage {
         }
     }
 
-    public static String getPathToBooks() {
+    public static File[] getBooksPaths() {
+        return booksPaths;
+    }
+
+    public static void setBooksPaths(String booksPaths) {
+        CoversPathStorage.booksPaths = new File(booksPaths).listFiles();
+    }
+
+    public static File getPathToBooks() {
         return pathToBooks;
+    }
+
+    public static void setPathToBooks(String pathToBooks) {
+        CoversPathStorage.pathToBooks = new File(pathToBooks);
     }
 }

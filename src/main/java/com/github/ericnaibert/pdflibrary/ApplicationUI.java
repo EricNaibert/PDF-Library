@@ -1,13 +1,12 @@
 package com.github.ericnaibert.pdflibrary;
 
+import com.github.ericnaibert.pdflibrary.group.HelloController;
 import com.github.ericnaibert.pdflibrary.menu.Refresh;
+import com.github.ericnaibert.pdflibrary.storage.CoversPathStorage;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
 import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.awt.*;
@@ -57,6 +56,8 @@ public class ApplicationUI extends Application {
         }
 
         Toolkit.getDefaultToolkit();
+
+        CoversPathStorage.getBooksLocation();
 
         launch(args);
 

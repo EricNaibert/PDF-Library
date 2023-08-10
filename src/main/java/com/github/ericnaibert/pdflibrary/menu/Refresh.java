@@ -65,7 +65,7 @@ public class Refresh extends ApplicationUI {
                     root2.getChildren().add(hBox);
 
                     CoversPathStorage.getBooksLocation();
-                    File booksPath = new File(CoversPathStorage.getPathToBooks());
+                    File booksPath = CoversPathStorage.getPathToBooks();
 
                     if(booksPath.exists()) {
                         showBookThread();
