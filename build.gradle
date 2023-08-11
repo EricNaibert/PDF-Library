@@ -37,7 +37,8 @@ javafx {
 
 dependencies {
   implementation('org.controlsfx:controlsfx:11.1.2')
-  implementation fileTree(dir: 'lib', include: '*.jar')
+  implementation('commons-io:commons-io:2.13.0')
+  implementation('org.apache.pdfbox:pdfbox:3.0.0-beta1')
 
   testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")

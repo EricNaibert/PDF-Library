@@ -5,7 +5,9 @@ module com.github.ericnaibert.pdflibrary {
     requires org.controlsfx.controls;
     requires java.desktop;
 
-    requires pdfbox.app;
+    requires org.apache.pdfbox;
+    requires org.apache.pdfbox.io;
+    requires org.apache.commons.io;
 
     opens com.github.ericnaibert.pdflibrary to javafx.fxml;
     exports com.github.ericnaibert.pdflibrary;
