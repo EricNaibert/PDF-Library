@@ -33,12 +33,12 @@ public class ApplicationUI extends Application {
         root.getChildren().add(fxmlLoader.load());
         root2.getChildren().add(fxmlLoader2.load());
 
-        Refresh.refreshAndCreateUI();
-
         scene = new Scene(root, 1000, 700);
         scene2 = new Scene(root2, 1000, 700);
         scene.getStylesheets().add(css);
         scene2.getStylesheets().add(css);
+
+        Refresh.refreshAndCreateUI();
 
         getStage = stage;
         stage.setScene(scene);

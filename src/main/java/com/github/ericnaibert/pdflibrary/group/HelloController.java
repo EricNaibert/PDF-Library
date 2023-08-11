@@ -14,16 +14,14 @@ public class HelloController {
 
     public static File fileDirectory;
 
-    public static File[] directories;
+    @FXML
+    public Button button;
 
     @FXML
-    protected Button button;
+    public Button backToMenu;
 
     @FXML
-    protected Button backToMenu;
-
-    @FXML
-    protected void onClick() {
+    public void onClick() {
 
         final DirectoryChooser directoryChooser = new DirectoryChooser();
 
@@ -32,8 +30,6 @@ public class HelloController {
         fileDirectory = directoryChooser.showDialog(Stage.getWindows().get(0));
 
         CoversPathStorage.storeCoverLocation(fileDirectory.getAbsolutePath());
-
-        directories = fileDirectory.listFiles();
 
         if(fileDirectory.exists()) {
 
@@ -56,7 +52,8 @@ public class HelloController {
     }
 
     @FXML
-    protected void onClickBack() {
+    public void onClickBack() {
+        System.out.println("CLICKED");
         ApplicationUI.root.getChildren().removeAll();
         ApplicationUI.root2.getChildren().removeAll();
         ApplicationUI.getStage.setScene(ApplicationUI.scene);

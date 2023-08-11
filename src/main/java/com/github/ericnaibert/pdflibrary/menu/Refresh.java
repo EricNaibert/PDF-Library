@@ -61,15 +61,19 @@ public class Refresh extends ApplicationUI {
                     try { hBox.getChildren().remove(0); } catch (Exception e) {
                         System.out.println("Exception while trying to remove empty hBox nodes:" + e);
                     }
+
                     refreshLibName();
                     root2.getChildren().add(hBox);
 
                     CoversPathStorage.getBooksLocation();
                     File booksPath = CoversPathStorage.getPathToBooks();
 
-                    if(booksPath.exists()) {
-                        showBookThread();
-
+                    try {
+                        if(booksPath.exists()) {
+                            showBookThread();
+                        }
+                    } catch(NullPointerException e) {
+                        System.out.println("Books Path wasn't created yet. Exception:" + e);
                     }
 
                 });
@@ -94,7 +98,7 @@ public class Refresh extends ApplicationUI {
 
         showBooksTask.setOnSucceeded(event -> {
             Loading.stage.close();
-            ApplicationUI.root2.getChildren().addAll(ShowBooksTask.scrollPane);
+            root2.getChildren().addAll(ShowBooksTask.scrollPane);
         });
     }
 
@@ -102,9 +106,9 @@ public class Refresh extends ApplicationUI {
 
         hBox = new HBox();
         hBox.setPrefHeight(20);
-        hBox.setPrefWidth(1000);
+        hBox.setPrefWidth(600);
         hBox.setLayoutY(30);
-        hBox.setLayoutX(0);
+        hBox.setLayoutX(200);
         hBox.setAlignment(Pos.CENTER);
 
         Label libTitleLabel = new Label();
