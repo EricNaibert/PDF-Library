@@ -5,7 +5,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #5A5A5A;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.github.ericnaibert.pdflibrary.group.HelloController">
-   <Button fx:id="backToMenu" layoutX="85.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#onClickBack" text="&lt;" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="820.4" AnchorPane.topAnchor="27.0">
+   <Button id="backButton" fx:id="backToMenu" layoutX="85.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#onClickBack" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="820.4" AnchorPane.topAnchor="27.0">
       <font>
          <Font name="System Bold" size="14.0" />
       </font>

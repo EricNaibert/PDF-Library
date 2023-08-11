@@ -103,7 +103,7 @@ public class Refresh extends ApplicationUI {
         hBox = new HBox();
         hBox.setPrefHeight(20);
         hBox.setPrefWidth(1000);
-        hBox.setLayoutY(40);
+        hBox.setLayoutY(30);
         hBox.setLayoutX(0);
         hBox.setAlignment(Pos.CENTER);
 

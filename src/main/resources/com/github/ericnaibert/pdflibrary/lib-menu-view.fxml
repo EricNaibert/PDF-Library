@@ -11,11 +11,11 @@
          <Font name="System Bold" size="18.0" />
       </font>
    </Label>
-   <Button fx:id="button" layoutX="549.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="40.0" prefWidth="40.0" text="+" textAlignment="CENTER" AnchorPane.leftAnchor="549.0" AnchorPane.rightAnchor="411.0" AnchorPane.topAnchor="27.0">
+   <Button id="addButton" fx:id="button" layoutX="549.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="40.0" prefWidth="40.0" textAlignment="CENTER" AnchorPane.leftAnchor="549.0" AnchorPane.rightAnchor="411.0" AnchorPane.topAnchor="22.0">
       <font>
          <Font name="Arial Bold" size="20.0" />
       </font></Button>
-   <Button fx:id="refreshButton" layoutX="390.0" layoutY="27.0" mnemonicParsing="false" onAction="#refresh" prefHeight="40.0" prefWidth="40.0" text="R" textAlignment="CENTER" AnchorPane.leftAnchor="390.0" AnchorPane.rightAnchor="570.0" AnchorPane.topAnchor="27.0">
+   <Button id="attButton" fx:id="refreshButton" layoutX="390.0" layoutY="27.0" mnemonicParsing="false" onAction="#refresh" prefHeight="40.0" prefWidth="40.0" textAlignment="CENTER" AnchorPane.leftAnchor="390.0" AnchorPane.rightAnchor="570.0" AnchorPane.topAnchor="22.0">
       <font>
          <Font name="System Bold" size="18.0" />
       </font>

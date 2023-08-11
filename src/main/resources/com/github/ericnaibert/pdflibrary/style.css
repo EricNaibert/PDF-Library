@@ -23,3 +23,36 @@
     -fx-font-size: 17;
     -fx-font-weight: bold;
 }
+
+#attButton {
+    -fx-background-image:url(images/refresh.png);
+    -fx-background-size: stretch;
+    -fx-padding: 5;
+    -fx-background-color: #5A5A5A;
+    -fx-border-style: solid inside;
+    -fx-border-width: 2;
+    -fx-border-radius: 30;
+    -fx-border-color: white;
+}
+
+#addButton {
+    -fx-background-image:url(images/add.png);
+    -fx-background-size: stretch;
+    -fx-padding: 5;
+    -fx-background-color: #5A5A5A;
+    -fx-border-style: solid inside;
+    -fx-border-width: 2;
+    -fx-border-radius: 30;
+    -fx-border-color: white;
+}
+
+#backButton {
+    -fx-background-image:url(images/back.png);
+    -fx-background-size: stretch;
+    -fx-padding: 5;
+    -fx-background-color: #5A5A5A;
+    -fx-border-style: solid inside;
+    -fx-border-width: 2;
+    -fx-border-radius: 30;
+    -fx-border-color: white;
+}

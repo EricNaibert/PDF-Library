@@ -1,6 +1,5 @@
 package com.github.ericnaibert.pdflibrary;
 
-import com.github.ericnaibert.pdflibrary.group.HelloController;
 import com.github.ericnaibert.pdflibrary.menu.Refresh;
 import com.github.ericnaibert.pdflibrary.storage.CoversPathStorage;
 import javafx.application.Application;
