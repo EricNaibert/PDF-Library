@@ -54,7 +54,7 @@ public class ShowBooksTask extends Task<Void> {
 
         for(int i = 0; i < booksList.length; i++) {
 
-            Button button = new Button("" + i);
+            Button button = new Button();
             button.setPrefHeight(200);
             button.setPrefWidth(160);
             RunnableThread.passButtonAndIndex(button, i);

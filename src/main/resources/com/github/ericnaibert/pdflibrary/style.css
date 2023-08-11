@@ -56,3 +56,11 @@
     -fx-border-radius: 30;
     -fx-border-color: white;
 }
+
+#trashButton {
+    -fx-background-image:url(images/trashIcon.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 35;
+    -fx-background-color: #5A5A5A;
+}

@@ -3,10 +3,10 @@ package com.github.ericnaibert.pdflibrary.menu;
 import com.github.ericnaibert.pdflibrary.ApplicationUI;
 import com.github.ericnaibert.pdflibrary.group.Loading;
 import com.github.ericnaibert.pdflibrary.group.ShowBooksTask;
-import com.github.ericnaibert.pdflibrary.storage.CoversPathStorage;
 import com.github.ericnaibert.pdflibrary.storage.PathStorage;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
@@ -14,10 +14,14 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Refresh extends ApplicationUI {
 
     private static HBox hBox;
+
+    private static final List<Node> hBoxNodes = new ArrayList<>();
 
     private static FlowPane flowPane;
 
@@ -56,24 +60,31 @@ public class Refresh extends ApplicationUI {
                     root.getChildren().remove(flowPane);
                     getStage.setScene(scene2);
 
-                    folderName = library.getName();
+                    setFolderName(library.getName());
 
-                    try { hBox.getChildren().remove(0); } catch (Exception e) {
+                    try {
+                        hBox.getChildren().removeAll(hBoxNodes);
+                    } catch (Exception e) {
                         System.out.println("Exception while trying to remove empty hBox nodes:" + e);
                     }
 
                     refreshLibName();
                     root2.getChildren().add(hBox);
 
-                    CoversPathStorage.getBooksLocation();
-                    File booksPath = CoversPathStorage.getPathToBooks();
+                    File pathToCovers = new File(System.getProperty("user.home") + "/Documents/PdfLibrary/" + Refresh.getFolderName() + "/covers.LIBRARY");
 
                     try {
-                        if(booksPath.exists()) {
+                        if(pathToCovers.exists()) {
+                            root2.getChildren().removeAll(ShowBooksTask.scrollPane);
                             showBookThread();
                         }
+
                     } catch(NullPointerException e) {
                         System.out.println("Books Path wasn't created yet. Exception:" + e);
+                    }
+
+                    if(!pathToCovers.exists()) {
+                        root2.getChildren().removeAll(ShowBooksTask.scrollPane);
                     }
 
                 });
@@ -109,12 +120,26 @@ public class Refresh extends ApplicationUI {
         hBox.setPrefWidth(600);
         hBox.setLayoutY(30);
         hBox.setLayoutX(200);
+        hBox.setSpacing(5);
         hBox.setAlignment(Pos.CENTER);
 
         Label libTitleLabel = new Label();
         libTitleLabel.setText(getFolderName().toUpperCase());
         libTitleLabel.setId("libLabelId");
         hBox.getChildren().add(libTitleLabel);
+        hBoxNodes.add(libTitleLabel);
+
+        Button trashButton = new Button();
+        trashButton.setPrefWidth(40);
+        trashButton.setPrefHeight(40);
+        trashButton.setId("trashButton");
+        trashButton.setOnMouseClicked(DeleteGroup.eventHandler);
+        hBox.getChildren().add(trashButton);
+        hBoxNodes.add(trashButton);
+    }
+
+    public static void setFolderName(String folderName) {
+        Refresh.folderName = folderName;
     }
 
     public static String getFolderName() {

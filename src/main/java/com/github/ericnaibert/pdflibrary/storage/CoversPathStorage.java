@@ -46,6 +46,9 @@ public class CoversPathStorage {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+        } else {
+            setBooksPaths("");
+            setPathToBooks("");
         }
     }
 
