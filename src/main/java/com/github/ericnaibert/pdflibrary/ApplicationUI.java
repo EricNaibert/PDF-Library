@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.awt.*;
@@ -40,8 +41,13 @@ public class ApplicationUI extends Application {
 
         Refresh.refreshAndCreateUI();
 
+        Image image = new Image(String.valueOf(ApplicationUI.class.getResource("images/libraryLogo.png")));
+
         getStage = stage;
+        stage.setTitle("PDF Library");
+        stage.getIcons().add(image);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
