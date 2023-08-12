@@ -6,7 +6,6 @@ module com.github.ericnaibert.pdflibrary {
     requires java.desktop;
 
     requires org.apache.pdfbox;
-    requires org.apache.pdfbox.io;
     requires org.apache.commons.io;
 
     opens com.github.ericnaibert.pdflibrary to javafx.fxml;

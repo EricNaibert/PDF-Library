@@ -28,13 +28,13 @@ public class Loading extends Stage {
         Label progressIndicatorLabel = new Label();
         progressIndicatorLabel.setText("Loading Covers...");
         progressIndicatorLabel.setLayoutY(52);
-        progressIndicatorLabel.setPrefWidth(100);
+        progressIndicatorLabel.setPrefWidth(130);
         progressIndicatorLabel.setStyle("-fx-font-size: 17; -fx-text-fill: white;");
 
         VBox vBox = new VBox();
         vBox.setBackground(Background.EMPTY);
 
-        Scene scene = new Scene(vBox, 100, 100);
+        Scene scene = new Scene(vBox, 140, 140);
         scene.setFill(Color.TRANSPARENT);
 
         vBox.getChildren().add(progressIndicator);

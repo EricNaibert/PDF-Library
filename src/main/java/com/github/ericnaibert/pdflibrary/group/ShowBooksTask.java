@@ -11,7 +11,6 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
-import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.rendering.PDFRenderer;
 
@@ -63,7 +62,7 @@ public class ShowBooksTask extends Task<Void> {
 
                 try {
                     System.out.println("path: " + booksList[i].getAbsolutePath());
-                    PDDocument document = Loader.loadPDF(booksList[i]);
+                    PDDocument document = PDDocument.load(booksList[i]);
 
                     PDFRenderer renderer = new PDFRenderer(document);
 
