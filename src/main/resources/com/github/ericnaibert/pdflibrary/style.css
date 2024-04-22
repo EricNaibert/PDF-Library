@@ -6,6 +6,10 @@
    -fx-background-color: #5A5A5A;
 }
 
+#settingsBar {
+    -fx-background-color: #A3A3A3;
+}
+
 #groupButtons {
     -fx-text-fill: white;
     -fx-font-size: 15;
@@ -25,42 +29,41 @@
 }
 
 #attButton {
-    -fx-background-image:url(images/refresh.png);
-    -fx-background-size: stretch;
-    -fx-padding: 5;
-    -fx-background-color: #5A5A5A;
-    -fx-border-style: solid inside;
-    -fx-border-width: 2;
-    -fx-border-radius: 30;
-    -fx-border-color: white;
+    -fx-background-image:url(images/icons/syncIcon.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 40;
+    -fx-background-color: #A3A3A3;
 }
 
 #addButton {
-    -fx-background-image:url(images/add.png);
-    -fx-background-size: stretch;
-    -fx-padding: 5;
-    -fx-background-color: #5A5A5A;
-    -fx-border-style: solid inside;
-    -fx-border-width: 2;
-    -fx-border-radius: 30;
-    -fx-border-color: white;
+    -fx-background-image:url(images/icons/addIcon.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 40;
+    -fx-background-color: #A3A3A3;
 }
 
 #backButton {
-    -fx-background-image:url(images/back.png);
-    -fx-background-size: stretch;
-    -fx-padding: 5;
-    -fx-background-color: #5A5A5A;
-    -fx-border-style: solid inside;
-    -fx-border-width: 2;
-    -fx-border-radius: 30;
-    -fx-border-color: white;
+    -fx-background-image:url(images/icons/backIcon.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 40;
+    -fx-background-color: #A3A3A3;
+}
+
+#findButton {
+    -fx-background-image:url(images/icons/findIcon.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 40;
+    -fx-background-color: #A3A3A3;
 }
 
 #trashButton {
-    -fx-background-image:url(images/trashIcon.png);
+    -fx-background-image:url(images/icons/trashIcon.png);
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
-    -fx-background-size: 35;
-    -fx-background-color: #5A5A5A;
+    -fx-background-size: 40;
+    -fx-background-color: #A3A3A3;
 }
